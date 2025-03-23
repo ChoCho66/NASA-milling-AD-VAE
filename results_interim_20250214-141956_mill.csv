@@ -1,0 +1,2 @@
+,beta_value,codings_size,conv_layers,dilations,earlystop_patience,kernel_size_1,start_filter_no,loss,rounded_accuracy,val_loss,val_rounded_accuracy,epochs_trained,date_time,model_name
+0,6.451960482049682,32,3,"[1, 2, 4]",40,8,28,2.2354443073272705,0.5124918818473816,47.0272102355957,0.5297331213951111,1.0,20250214-141956,"TBVAE-20250214-141956:_b=6.45_c=32_l=3_f1=28_k1=8_dil=[1, 2, 4]_p=2.65e+05_eps=1_pat=40"

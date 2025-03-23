@@ -317,25 +317,40 @@ class SelectThreshold:
                 "pr_auc_val_score",
                 "date_time",
             ]
-            result_table = result_table.append(
-                pd.DataFrame(
+            # result_table = result_table.append(
+            #     pd.DataFrame(
+            #         [
+            #             [
+            #                 self.model_name,
+            #                 "mse",
+            #                 best_threshold,
+            #                 roc_auc_score_train,
+            #                 roc_auc_score_val,
+            #                 pr_auc_score_train,
+            #                 pr_auc_score_val,
+            #                 self.date_time,
+            #             ]
+            #         ],
+            #         columns=col,
+            #     ),
+            #     sort=False,
+            # )
+            new_row = pd.DataFrame(
+                [
                     [
-                        [
-                            self.model_name,
-                            "mse",
-                            best_threshold,
-                            roc_auc_score_train,
-                            roc_auc_score_val,
-                            pr_auc_score_train,
-                            pr_auc_score_val,
-                            self.date_time,
-                        ]
-                    ],
-                    columns=col,
-                ),
-                sort=False,
+                        self.model_name,
+                        "mse",
+                        best_threshold,
+                        roc_auc_score_train,
+                        roc_auc_score_val,
+                        pr_auc_score_train,
+                        pr_auc_score_val,
+                        self.date_time,
+                    ]
+                ],
+                columns=col,
             )
-
+            result_table = pd.concat([result_table, new_row], ignore_index=True, sort=False)
             # else:
             #     result_table = result_table.append(pd.DataFrame([[self.model_name,'mse',
             #                                                     best_threshold,
